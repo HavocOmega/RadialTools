@@ -24,9 +24,9 @@ local Actions: {[string]: RBXScriptConnection} = {}
 
 -- ---------------------------- Private Functions --------------------------- --
 local function InitializePlugin()
-    for _, Tools in Tools:GetChildren() do
-        local Tool = require(Tools)
-        Tool.Initialize()
+    for _, Tool in Tools:GetChildren() do
+        local ToolContents = require(Tool)
+        ToolContents.Initialize()
     end
 end
 
@@ -36,3 +36,5 @@ UserInputService.InputBegan:Connect(function(InputObject: InputObject)
         
     end
 end)
+
+InitializePlugin()
