@@ -33,7 +33,7 @@ end
 -- ------------------------------- Connections ------------------------------ --
 UserInputService.InputBegan:Connect(function(InputObject: InputObject)
     if InputObject.UserInputType == Enum.UserInputType.MouseButton1 then
-        
+        print("bakaa")
     end
 end)
 
